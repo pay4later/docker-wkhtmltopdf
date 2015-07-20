@@ -1,6 +1,6 @@
 # pay4later/docker-wkhtmltopdf
 
-A docker container to run wkhtmltopdf including Microsoft's True Type core fonts.
+A docker container to run wkhtmltopdf including Microsoft's TrueType core fonts.
 
 ## Building the image
 
