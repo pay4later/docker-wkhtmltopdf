@@ -24,7 +24,7 @@ RUN echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula selec
     apt-get -q -y install ttf-mscorefonts-installer && \
 	apt-get clean && \
 	rm -rf /var/lib/apt/lists/* /var/cache/* && \
-	bash -c '[[ -f /usr/share/fonts/truetype/msttcorefonts/Arial.ttf ]] || echo "msttcorefonts error" >&2; exit 1'
+	bash -c '[[ -f /usr/share/fonts/truetype/msttcorefonts/Arial.ttf ]] && exit 0 || echo "msttcorefonts error" >&2 && exit 1'
 
 ENTRYPOINT ["wkhtmltopdf"]
 
